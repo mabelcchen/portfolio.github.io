@@ -1,0 +1,137 @@
+.toolkit-page {
+  min-height: 100vh;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+  position: relative;
+}
+
+.toolkit-back {
+  position: absolute;
+  top: 2rem;
+  left: 3rem;
+  font-family: var(--sans);
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.toolkit-back:hover { color: var(--text); }
+
+.toolkit-title {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 500;
+  color: var(--text);
+  margin-top: 4rem;
+  line-height: 1.1;
+}
+
+.toolkit-sub {
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* ── TOOLBOX SCENE ── */
+.hand-scene {
+  position: relative;
+  width: min(860px, 92vw);
+  height: min(680px, 90vw);
+}
+
+.toolbox-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* ── TOOL ICONS ── */
+.tool-icon {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  animation: iconFloat 3s ease-in-out calc(var(--d)) infinite alternate;
+  cursor: default;
+  transition: transform 0.3s;
+}
+
+.tool-icon:hover {
+  transform: translate(-50%, -50%) scale(1.25) translateY(-8px);
+}
+
+.tool-icon:hover img,
+.tool-icon:hover .tool-text-icon {
+  box-shadow: 0 8px 28px rgba(0,0,0,0.15);
+}
+
+.tool-icon:hover span:last-child {
+  color: var(--text);
+}
+
+.tool-icon img {
+  width: 80px;
+  height: 80px;
+  border-radius: 16px;
+  background: white;
+  padding: 10px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+
+.tool-text-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--sans);
+  font-size: 0.55rem;
+  font-weight: 500;
+  color: var(--charcoal);
+  letter-spacing: 0.04em;
+}
+
+.tool-icon span:last-child {
+  font-family: var(--sans);
+  font-size: 0.5rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+@keyframes iconFloat {
+  0%   { translate: 0 0; }
+  100% { translate: 0 -18px; }
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 860px) {
+  .toolkit-page { padding: 2rem 1.5rem; }
+  .toolkit-back { top: 1.25rem; left: 1.5rem; }
+
+  .tool-icon img,
+  .tool-text-icon {
+    width: 34px;
+    height: 34px;
+    padding: 5px;
+  }
+}

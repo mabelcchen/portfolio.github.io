@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Mabel Chen</title>
+  <meta name="description" content="Projects by Mabel Chen — brand strategy, editorial content, marketing sites, and data storytelling." />
+  <link rel="icon" href="favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="projects.css" />
+  <script src="https://unpkg.com/lucide@0.456.0/dist/umd/lucide.js"></script>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav id="nav">
+  <a href="index.html" class="nav-logo">← Back</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="about.html"                                         onclick="closeMenu()">About</a></li>
+    <li><a href="projects.html"                                      onclick="closeMenu()">Projects</a></li>
+    <li><a href="Mabel_chen_resume.pdf" target="_blank" rel="noopener" onclick="closeMenu()">Resume</a></li>
+    <li><a href="toolkit.html"                                       onclick="closeMenu()">My Toolkit</a></li>
+  </ul>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+    <i data-lucide="menu" width="18" height="18"></i>
+  </button>
+</nav>
+
+<!-- ── TIMELINE STAGE ── -->
+<div class="stage" id="stage">
+  <div class="camera" id="camera">
+
+    <!-- Frame 0: THE ECONOMIC WARDROBE -->
+    <div class="frame">
+      <div class="cp-content" id="cp-0">
+        <div class="cp-dot start-dot"></div>
+        <span class="cp-num">The Economic Wardrobe</span>
+        <h3 class="cp-title" style="font-size:clamp(1.2rem,2vw,1.6rem);color:var(--muted)"><em>The</em> Economic Wardrobe</h3>
+        <p class="cp-desc">Building an independent publication from the ground up — brand identity, editorial strategy, content, and distribution. Here's how it came together.</p>
+      </div>
+      <div class="line-seg"><div class="fill" id="line-0"></div></div>
+    </div>
+
+    <!-- Frame 1: INSIGHT -->
+    <div class="frame">
+      <div class="cp-content" id="cp-1">
+        <div class="cp-dot"></div>
+        <span class="cp-num">01 — Insight</span>
+        <h3 class="cp-title"><em>Insight</em></h3>
+        <p class="cp-desc">Identified a whitespace in fashion media: everyone covers trends, almost nobody reads fashion as economic history. Researched consumer behaviour, trade economics, and sumptuary law to develop an editorial angle no existing publication owned.</p>
+      </div>
+      <div class="line-seg"><div class="fill" id="line-1"></div></div>
+    </div>
+
+    <!-- Frame 2: BRAND IDENTITY -->
+    <div class="frame">
+      <div class="cp-content" id="cp-2">
+        <div class="cp-dot"></div>
+        <span class="cp-num">02 — Brand Identity</span>
+        <h3 class="cp-title"><em>Brand</em> Identity</h3>
+        <p class="cp-desc">Developed the name, visual system, and editorial voice. Chose Cormorant for its high-fashion editorial feel paired with Inter for readability. Set a monochrome palette with a single accent colour — every detail reinforcing the brand's position between scholarship and style.</p>
+      </div>
+      <div class="line-seg"><div class="fill" id="line-2"></div></div>
+    </div>
+
+    <!-- Frame 3: CONTENT STRATEGY -->
+    <div class="frame">
+      <div class="cp-content" id="cp-3">
+        <div class="cp-dot"></div>
+        <span class="cp-num">03 — Content Strategy</span>
+        <h3 class="cp-title"><em>Content</em> Strategy</h3>
+        <p class="cp-desc">Planned and wrote three long-form articles — Byzantine purple, the Black Death's impact on fashion access, and the broke-but-iconic 1990s. Each piece translates dense economic history into narrative-driven storytelling accessible to a non-academic audience. Built the site in HTML, CSS, and JavaScript to have full control over the reading experience.</p>
+      </div>
+      <div class="line-seg"><div class="fill" id="line-3"></div></div>
+    </div>
+
+    <!-- Frame 4: LAUNCH -->
+    <div class="frame">
+      <div class="cp-content" id="cp-4">
+        <div class="cp-dot launch-dot"></div>
+        <span class="cp-num">04 — Launch</span>
+        <h3 class="cp-title"><em>Launch</em></h3>
+        <p class="cp-desc">Published on Netlify, tested across devices, and positioned the brand in the fashion × economics niche. Three articles live, growing readership, and more on the way.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <button class="replay-btn" id="replayBtn" aria-label="Replay timeline">↺ Replay</button>
+</div>
+
+<!-- ── REVEAL: PROJECT CARDS ── -->
+<div class="reveal">
+  <div class="reveal-inner" id="revealInner">
+    <div class="section-inner">
+
+      <div class="section-meta">
+        <span class="section-title">Selected Work</span>
+        <span class="section-num">01 / 02</span>
+      </div>
+      <h2 class="section-heading">Recent <em>Projects</em></h2>
+
+      <div class="projects-grid">
+
+        <a href="https://theeconomicwardrobe.netlify.app/" target="_blank" rel="noopener" class="project-card" id="card-tew">
+          <div class="project-thumb-wrap">
+            <img src="tew-final.png" alt="The Economic Wardrobe" class="project-thumb" />
+          </div>
+          <div class="project-body">
+            <span class="project-num">01</span>
+            <h3 class="project-title"><em>The Economic</em> Wardrobe</h3>
+            <p class="project-desc">An independent publication I founded exploring how economic systems shape what people wear — from Byzantine trade law to 1990s recession culture. I own the brand identity, editorial strategy, long-form content, and the site itself, built from scratch.</p>
+            <div class="project-tags">
+              <span class="tag">Brand Strategy</span>
+              <span class="tag">Editorial Design</span>
+              <span class="tag">Content</span>
+              <span class="tag">Founder</span>
+            </div>
+            <span class="project-link">Visit Site →</span>
+          </div>
+        </a>
+
+        <a href="https://ezrealty.ca/" target="_blank" rel="noopener" class="project-card">
+          <div class="project-thumb-wrap">
+            <img src="home.png" alt="EZ Realty" class="project-thumb" />
+          </div>
+          <div class="project-body">
+            <span class="project-num">02</span>
+            <h3 class="project-title"><em>EZ</em> Realty</h3>
+            <p class="project-desc">Marketing work for a luxury real estate agent at Macdonald Realty. Built the website and a live market-data dashboard using Claude Code, managed social media content end to end, and grew Instagram following ~15% in a single month.</p>
+            <div class="project-tags">
+              <span class="tag">Marketing</span>
+              <span class="tag">Social Media</span>
+              <span class="tag">Data Viz</span>
+              <span class="tag">Brand</span>
+            </div>
+            <span class="project-link">Visit Site →</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── REPLAY BUTTON ── -->
+<div class="replay-wrap" id="replayWrap">
+  <button class="replay-page-btn" id="replayBtn2" aria-label="Replay timeline">↺ Play Timeline Again</button>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <span>Mabel Chen &mdash; Portfolio 2026</span>
+  <span>Design &amp; Development</span>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

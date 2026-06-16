@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toolkit — Mabel Chen</title>
+  <link rel="icon" href="favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="toolkit.css" />
+  <script src="https://unpkg.com/lucide@0.456.0/dist/umd/lucide.js"></script>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="index.html" class="nav-logo">← Back</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="about.html"                                           onclick="closeMenu()">About</a></li>
+    <li><a href="projects.html"                                        onclick="closeMenu()">Projects</a></li>
+    <li><a href="Mabel_chen_resume.pdf" target="_blank" rel="noopener" onclick="closeMenu()">Resume</a></li>
+    <li><a href="toolkit.html"                                         onclick="closeMenu()">My Toolkit</a></li>
+  </ul>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+    <i data-lucide="menu" width="18" height="18"></i>
+  </button>
+</nav>
+
+<section class="toolkit-page">
+
+  <h1 class="toolkit-title"><em>My</em> Toolkit</h1>
+  <p class="toolkit-sub">strategy, design, and the tools that connect them</p>
+
+  <div class="hand-scene">
+
+    <svg class="toolbox-bg" viewBox="0 0 500 420" xmlns="http://www.w3.org/2000/svg">
+      <!-- handle -->
+      <path d="M190 90 L190 50 Q190 30, 210 30 L290 30 Q310 30, 310 50 L310 90" fill="none" stroke="var(--border)" stroke-width="1.5" opacity="0.6"/>
+      <!-- body -->
+      <rect x="60" y="90" width="380" height="260" rx="12" fill="none" stroke="var(--border)" stroke-width="1.5" opacity="0.6"/>
+      <!-- latch -->
+      <rect x="230" y="82" width="40" height="16" rx="4" fill="none" stroke="var(--border)" stroke-width="1.5" opacity="0.6"/>
+      <!-- divider -->
+      <line x1="60" y1="180" x2="440" y2="180" stroke="var(--border)" stroke-width="1" opacity="0.35"/>
+      <!-- section labels -->
+      <text x="250" y="115" text-anchor="middle" font-family="Inter, sans-serif" font-size="8" letter-spacing="0.2em" fill="var(--muted)" opacity="0.5">STRATEGY &amp; ANALYTICS</text>
+      <text x="250" y="205" text-anchor="middle" font-family="Inter, sans-serif" font-size="8" letter-spacing="0.2em" fill="var(--muted)" opacity="0.5">DESIGN &amp; BUILD</text>
+    </svg>
+
+    <!-- TOP HALF: Strategy & Analytics -->
+    <div class="tool-icon" style="--x: 12%; --y: 22%; --d: 0s;">
+      <img src="google-sheets.png" alt="Google Sheets" />
+      <span>Google Sheets</span>
+    </div>
+
+    <div class="tool-icon" style="--x: 35%; --y: 18%; --d: 0.3s;">
+      <img src="claude.png" alt="Claude" />
+      <span>Claude AI</span>
+    </div>
+
+    <div class="tool-icon" style="--x: 58%; --y: 22%; --d: 0.6s;">
+      <img src="chatgpt.jpg" alt="ChatGPT" />
+      <span>ChatGPT</span>
+    </div>
+
+    <div class="tool-icon" style="--x: 82%; --y: 18%; --d: 0.9s;">
+      <img src="openclaw.jpg" alt="OpenClaw" />
+      <span>OpenClaw AI</span>
+    </div>
+
+    <!-- BOTTOM HALF: Design & Build -->
+    <div class="tool-icon" style="--x: 8%;  --y: 52%; --d: 0.2s;">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma" />
+      <span>Figma</span>
+    </div>
+
+    <div class="tool-icon" style="--x: 28%; --y: 56%; --d: 0.5s;">
+      <img src="canva.png" alt="Canva" />
+      <span>Canva</span>
+    </div>
+
+    <div class="tool-icon" style="--x: 48%; --y: 50%; --d: 0.8s;">
+      <img src="capcut.png" alt="CapCut" />
+      <span>CapCut</span>
+    </div>
+
+    <div class="tool-icon" style="--x: 68%; --y: 56%; --d: 1.1s;">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
+      <span>JavaScript</span>
+    </div>
+
+    <div class="tool-icon" style="--x: 88%; --y: 50%; --d: 0.4s;">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" />
+      <span>VS Code</span>
+    </div>
+
+    <div class="tool-icon" style="--x: 15%; --y: 82%; --d: 0.7s;">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" />
+      <span>GitHub</span>
+    </div>
+
+    <div class="tool-icon" style="--x: 40%; --y: 85%; --d: 1.0s;">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/netlify/netlify-original.svg" alt="Netlify" />
+      <span>Netlify</span>
+    </div>
+
+    <div class="tool-icon" style="--x: 65%; --y: 82%; --d: 0.3s;">
+      <img src="lovable.png" alt="Lovable" />
+      <span>Lovable</span>
+    </div>
+
+  </div>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

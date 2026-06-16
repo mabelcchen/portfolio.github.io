@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Mabel Chen</title>
+  <meta name="description" content="About Mabel Chen — economics and management student at UBC, focused on brand strategy, marketing, and the economics of culture." />
+  <link rel="icon" href="favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="about.css" />
+  <script src="https://unpkg.com/lucide@0.456.0/dist/umd/lucide.js"></script>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav id="nav">
+  <a href="index.html" class="nav-logo">← Back</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="about.html"                                           onclick="closeMenu()">About</a></li>
+    <li><a href="projects.html"                                        onclick="closeMenu()">Projects</a></li>
+    <li><a href="Mabel_chen_resume.pdf" target="_blank" rel="noopener" onclick="closeMenu()">Resume</a></li>
+    <li><a href="toolkit.html"                                         onclick="closeMenu()">My Toolkit</a></li>
+  </ul>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+    <i data-lucide="menu" width="18" height="18"></i>
+  </button>
+</nav>
+
+<!-- ── ABOUT HERO ── -->
+<section class="about-hero">
+
+  <!-- Decorative flower watermark -->
+  <div class="about-flower" id="aboutFlower">
+    <div class="af-core"></div>
+  </div>
+
+  <div class="about-inner">
+
+    <!-- LEFT: photo -->
+    <div class="about-photo-col">
+      <img src="profile.jpg" alt="Mabel Chen" class="about-photo" />
+    </div>
+
+    <!-- RIGHT: copy -->
+    <div class="about-copy-col">
+
+      <h1 class="about-title"><em>About</em></h1>
+
+      <p class="about-bio">
+        I'm Mabel Chen, an economics and business management student at UBC interested in how brands, markets, and culture shape the way people think and make decisions.
+      </p>
+      <p class="about-bio">
+        What I enjoy most is work that sits between analysis and storytelling. My economics background gives me a way of thinking about systems, incentives, and how people make decisions. I taught myself to design and code because I wanted to close the gap between strategy and execution — to not just plan a brand experience but actually build it. Now I work in that intersection: brand identity, content strategy, editorial design, and marketing sites where business thinking and aesthetics aren't separated.
+      </p>
+      <p class="about-bio">
+        I care about typography, layout, and the quiet details that make something feel considered. Outside of school, I spend a lot of time with photography, film, and fashion — and thinking about the economics underneath all of it.
+      </p>
+
+      <div class="about-education">
+        <h2 class="about-edu-heading"><em>Education</em></h2>
+        <p class="about-edu-school">The University of British Columbia</p>
+        <p class="about-edu-degree">Bachelor of Arts (Economics) + Master of Management — Dual Degree, 2025–2029</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── LATELY ── -->
+<section class="about-lately">
+  <div class="lately-inner">
+    <h2 class="lately-heading"><em>Lately</em></h2>
+    <div class="lately-grid">
+      <div>
+        <span class="lately-label">Writing</span>
+        <p class="lately-value">Fashion × Economics</p>
+        <p class="lately-note">Researching how wartime rationing invented modern ready-to-wear</p>
+      </div>
+      <div>
+        <span class="lately-label">Listening</span>
+        <p class="lately-value">Know Who You Are at Every Age</p>
+        <p class="lately-note">Cocteau Twins</p>
+      </div>
+      <div>
+        <span class="lately-label">Building</span>
+        <p class="lately-value">This portfolio</p>
+        <p class="lately-note">Static HTML/CSS/JS, Cormorant + Inter, no frameworks</p>
+      </div>
+      <div>
+        <span class="lately-label">Looking for</span>
+        <p class="lately-value">Summer 2027 internships</p>
+        <p class="lately-note">Brand strategy, marketing, growth, and consulting</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <span>Mabel Chen &mdash; Portfolio 2026</span>
+  <span>Design &amp; Development</span>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  /* ── Decorative about-flower bloom ── */
+  (function () {
+    const flower = document.getElementById('aboutFlower');
+    if (!flower) return;
+
+    const angles = [-30, -66, -102, -138, -174, 6, 42, 78, 114, 150, 186];
+
+    const sorted = [...angles].sort((a, b) => {
+      const norm = x => ((x % 360) + 360) % 360;
+      return norm(a - (-174)) - norm(b - (-174));
+    });
+
+    sorted.forEach((angle, i) => {
+      const wrap = document.createElement('div');
+      wrap.className = 'af-petal';
+      wrap.style.setProperty('--a', angle + 'deg');
+      wrap.style.setProperty('--d', (i * 0.12) + 's');
+
+      const shape = document.createElement('div');
+      shape.className = 'af-petal-shape';
+      wrap.appendChild(shape);
+      flower.appendChild(wrap);
+    });
+
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      flower.classList.add('run');
+    }));
+  })();
+</script>
+
+</body>
+</html>

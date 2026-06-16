@@ -1,0 +1,242 @@
+/* ── PAGE DARK THEME ── */
+body {
+  background: #2e2e2e;
+}
+
+/* ── PROJECTS GRID ── */
+.projects-grid-section {
+  background: #2e2e2e;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 8rem 3rem;
+}
+
+.projects-grid-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8rem;
+  align-items: start;
+}
+
+/* ── PROJECT CARD ── */
+.proj-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ── FOLDER ── */
+.folder {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  margin-bottom: 2.5rem;
+  filter: drop-shadow(0 18px 40px rgba(0,0,0,0.7)) drop-shadow(0 4px 10px rgba(0,0,0,0.5));
+  transform: perspective(900px) rotateX(3deg) rotateY(-4deg);
+  transition: transform 0.4s cubic-bezier(.22,1,.36,1), filter 0.4s;
+}
+
+.proj-card:hover .folder {
+  transform: perspective(900px) rotateX(1deg) rotateY(-2deg) translateY(-10px);
+  filter: drop-shadow(0 28px 50px rgba(0,0,0,0.8)) drop-shadow(0 6px 14px rgba(0,0,0,0.5));
+}
+
+/* Back panel — full height */
+.folder-back {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: 5px;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.09'/%3E%3C/svg%3E"),
+    linear-gradient(135deg, #d4b0ab 0%, #c9a8a3 60%, #bf9e99 100%);
+}
+
+/* Left thickness edge of the back panel */
+.folder-back::before {
+  content: '';
+  position: absolute;
+  left: -6px;
+  top: 2px;
+  bottom: -4px;
+  width: 6px;
+  background: linear-gradient(to right, #a07f7a, #b8928d);
+  border-radius: 3px 0 0 3px;
+  transform: skewY(-1deg);
+}
+
+/* Bottom thickness edge of the back panel */
+.folder-back::after {
+  content: '';
+  position: absolute;
+  left: -4px;
+  right: -2px;
+  bottom: -6px;
+  height: 6px;
+  background: linear-gradient(to bottom, #b8928d, #a07f7a);
+  border-radius: 0 0 4px 4px;
+  transform: skewX(-1deg);
+}
+
+/* Tab — left side, sticking up */
+.folder-tab {
+  position: absolute;
+  top: -15%;
+  left: 0;
+  width: 36%;
+  height: 17%;
+  background: linear-gradient(135deg, #d4b0ab 0%, #c9a8a3 100%);
+  border-radius: 5px 5px 0 0;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+}
+
+/* White paper strip at top */
+.folder-paper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 18%;
+  z-index: 2;
+  background: linear-gradient(to bottom, #f0ede8, #d8d4ce);
+  border-radius: 0 4px 0 0;
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,0.15);
+}
+
+/* Photo peeking out of folder */
+.folder-peek {
+  position: absolute;
+  z-index: 2;
+  top: -8%;
+  left: 8%;
+  right: 8%;
+  height: 55%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 2px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+/* Front panel — cut at top-right */
+.folder-front {
+  position: absolute;
+  inset: 0;
+  top: 14%;
+  z-index: 3;
+  border-radius: 0 0 5px 5px;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.09'/%3E%3C/svg%3E"),
+    linear-gradient(145deg, #d4b0ab 0%, #c9a8a3 50%, #bf9e99 100%);
+  clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 22px, 100% 100%, 0 100%);
+}
+
+/* Highlight along top-left edge of front panel */
+.folder-front::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(to right, rgba(255,255,255,0.12), transparent 60%);
+}
+
+/* Left thickness edge of front panel */
+.folder-front::after {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: 3px;
+  bottom: -4px;
+  width: 5px;
+  background: linear-gradient(to right, #a07f7a, #b8928d);
+  border-radius: 2px 0 0 3px;
+}
+
+/* Label text on the front panel */
+.folder-label {
+  position: absolute;
+  top: 22%;
+  left: 8%;
+  right: 8%;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.folder-script {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1.1rem, 2.8vw, 1.9rem);
+  font-weight: 400;
+  color: rgba(0,0,0,0.7);
+  letter-spacing: 0.01em;
+}
+
+/* ── PROJ INFO ── */
+.proj-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.proj-num {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.58rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.3);
+  margin-bottom: 0.75rem;
+}
+
+.proj-title {
+  font-family: var(--serif);
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 500;
+  color: #fff;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.proj-title em { color: #fff; font-style: italic; }
+
+.proj-desc {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.85;
+  margin-bottom: 1.25rem;
+}
+
+.proj-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.proj-card .tag {
+  color: rgba(255,255,255,0.4);
+  border-color: rgba(255,255,255,0.15);
+}
+
+.proj-link {
+  display: inline-block;
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  padding-bottom: 0.2rem;
+  transition: opacity 0.2s;
+}
+
+.proj-link:hover { opacity: 0.5; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 860px) {
+  .projects-grid-section { padding: 6rem 1.5rem; }
+  .projects-grid-inner { grid-template-columns: 1fr; gap: 5rem; }
+}
