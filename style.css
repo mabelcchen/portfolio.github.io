@@ -785,13 +785,44 @@ footer {
 
   .flower {
     position: absolute;
-    right: -420px;
+    left: 50%;
     top: 50%;
-    transform: translateY(-50%) scale(0.7);
-    margin-top: 0;
+    transform: translate(-50%, -50%) scale(0.75);
+    opacity: 0.12;
+    pointer-events: none;
   }
 
-  .petal-label { opacity: 1; }
+  .flower .petal-wrap,
+  .flower .core {
+    pointer-events: none;
+  }
+
+  .petal-label { display: none; }
+
+.hero-mobile-nav { display: none; }
+
+  .hero-mobile-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.4rem;
+    margin-top: 2.5rem;
+    position: relative;
+    z-index: 10;
+  }
+
+  .hero-mobile-nav a {
+    font-family: var(--serif);
+    font-size: 1.6rem;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    transition: color 0.2s;
+  }
+
+  .hero-mobile-nav a:hover { color: var(--muted); }
 
   .section-inner { padding: 4rem 1.5rem; }
   .projects-grid { grid-template-columns: 1fr; gap: 3rem; }
