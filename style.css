@@ -743,6 +743,8 @@ footer {
   color: var(--muted);
 }
 
+.hero-mobile-nav { display: none; }
+
 /* ── RESPONSIVE ── */
 @media (max-width: 860px) {
   nav#nav { padding: 1.25rem 1.5rem; }
@@ -798,8 +800,6 @@ footer {
   }
 
   .petal-label { display: none; }
-
-.hero-mobile-nav { display: none; }
 
   .hero-mobile-nav {
     display: flex;
